@@ -6,8 +6,13 @@ public class EventA implements Event {
     private ArrayList<Ticket> soldTickets = null;
 
     public EventA(Map<String, Integer> ticketStock){
-        this.ticketStock = ticketStock;
+        setTicketStock(ticketStock);
         this.soldTickets = new ArrayList<Ticket>();
+    }
+
+    private void setTicketStock(Map<String, Integer> ticketStock){
+        if(ticketStock != null)
+            this.ticketStock = ticketStock;
     }
 
     @Override
