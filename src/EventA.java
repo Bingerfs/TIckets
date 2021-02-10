@@ -10,7 +10,7 @@ public class EventA implements Event {
         this.soldTickets = new ArrayList<Ticket>();
     }
 
-    private void setTicketStock(Map<String, Integer> ticketStock){
+    public void setTicketStock(Map<String, Integer> ticketStock){
         if(ticketStock != null)
             this.ticketStock = ticketStock;
     }
